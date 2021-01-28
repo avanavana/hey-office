@@ -45,7 +45,6 @@ $ env/bin/google-oauthlib-tool \
 17. After you finish authenticating, you will be redirected to http://localhost:8080/, which we specified earlier. But if you look in the address bar, there will be a new URL query parameter, something like ?code=4/XXXX. Copy the entire code, starting after the equals sign, and paste it into your terminal, which now should be prompting you with: `Enter the authorization code:`.
 18. If everything goes well, you should get a response saying that credentials were saved to `../some/path/to/.config/google-oauthlib-tool/credentials.json`.
 19. Congratulations, you made it! Finally, just run `deactivate` to deactivate the python virtual environment you started, and you should be able to use **`hey-office`**.
-20. As shown above, to use, you can `npm install -g .` in the **`hey-office`** directory, to expose a global **`hey-office`** command, so you can run it with `hey-office [ command ] [ ( -a | --say-aloud ) ]`, otherwise you can always run with `node path/to/hey-office/bin/index.js [ command ] [ ( -a | --say-aloud ) ]`
 
 ## Installation
 

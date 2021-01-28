@@ -1,6 +1,6 @@
 # hey-office
 
-**`hey-office`** is a CLI for interacting with a Google Assistant-powered office (or home) using simple text commands, for example: `$ hey-office "turn off office lights"`. It relies heavily on this Node.js implementation of the Google Assistant SDK: [endoplasmic/google-assistant](https://github.com/endoplasmic/google-assistant). This utility is best used in conjunction with an existing implementation of Google Home (or office), for example, with named devices that the Google Assistant can recognize, but the Google Assistant will attempt to process any text query provided to it, for example, `$ hey-office "what time is it?"`. Note that the `command` argument is _optional_—if omitted, **`hey-office`** will run interactively, allowing you to type in a query manually. Besides boilerplate `-h/--help` and `-v/--version` options, a single `-a/--say-aloud` option is provided, which will cause MacOS computers to speak any Google Assistant response aloud.
+**`hey-office`** is a simple CLI for interacting with a Google Assistant-powered office (or home) using simple text commands, for example: `$ hey-office "turn off office lights"`. It relies heavily on this Node.js implementation of the Google Assistant SDK: [endoplasmic/google-assistant](https://github.com/endoplasmic/google-assistant). This utility is best used in conjunction with an existing implementation of Google Home (or office), for example, with named devices that the Google Assistant can recognize, but the Google Assistant will attempt to process any text query provided to it, for example, `$ hey-office "what time is it?"`. Note that the `command` argument is _optional_—if omitted, **`hey-office`** will run interactively, allowing you to type in a query manually. Besides boilerplate `-h/--help` and `-v/--version` options, a single `-a/--say-aloud` option is provided, which will cause MacOS computers to speak any Google Assistant response aloud.
 
 ## Important: Pre-installation Configuration
 
@@ -35,8 +35,10 @@ $ source env/bin/activate
 $ sudo apt-get install portaudio19-dev libffi-dev libssl-dev
 $ python -m pip install --upgrade google-assistant-sdk[samples]
 $ python -m pip install --upgrade google-auth-oauthlib[tool]
-$ env/bin/google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --headless --client-secrets \
-<PASTE_PATH_TO_CLIENT_SECRET_JSON_FILE_HERE>
+$ env/bin/google-oauthlib-tool \
+  --scope https://www.googleapis.com/auth/assistant-sdk-prototype \
+  --client-secrets <PASTE_PATH_TO_CLIENT_SECRET_JSON_FILE_HERE> \
+  --save
 ```
 
 16. After you run the last command, it will either open up a browser window automatically, asking you to authenticate with the Google app you just made in the Developers Console, so go ahead and do that with the account you used to create the project in the Google Developers Console. If a browser window does not open, you will see a URL in `stdout` in the terminal, which you can copy and paste into a browser to complete authentication.

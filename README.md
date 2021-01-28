@@ -52,7 +52,7 @@ $ env/bin/google-oauthlib-tool \
 To install as a global CLI command: (run in the **`hey-office`** home directory)
 `$ npm install -g .`. To run: `$ hey-office [ command ] [ ( -a | --say-aloud ) ]` (see usage below).
 
-Otherwise you can always run **`hey-office`** with `node path/to/hey-office/bin/index.js [ command ] [ ( -a | --say-aloud ) ]`
+Otherwise you can always just regular ol' `npm install` and run **`hey-office`** with `node path/to/hey-office/bin/index.js [ command ] [ ( -a | --say-aloud ) ]`
 
 ## Usage
 

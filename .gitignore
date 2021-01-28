@@ -11,6 +11,9 @@ env
 # Generated Google OAuth files
 .auth/*
 
+# Exception to keep .auth folder
+!.auth/.gitkeep
+
 # Runtime data
 pids
 *.pid

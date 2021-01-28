@@ -19,14 +19,14 @@
 11. Configure your consent screen step by step, you just need to enter a minimal amount of information, for example, a name to show, an email (or use the generated email provided). Just ensure all required fields in Step 1 are filled out.
 12. In Step 2, add the scope labeled **Google Assistant API** _./auth/assistant-sdk-prototype_, and only this scope. Finish the process and save.
 13. Now it's time to actually authorize your computer to use the API you have just configured on Google. This involves running some python commands. Start by navigating to the **`hey-office`** directory in your terminal. `cd path/to/hey-office`.
-14. If you **do not** have python3 installed, run the following commands in a terminal.
+14. If you **do not** have python3 installed, run the following commands in a terminal. If you already have python3 installed you can _skip this step_.
 
 ```
 $ sudo apt-get update
 $ sudo apt-get install python3-dev python3-venv
 ```
 
-15. If you **already have** python3 installed, _skip the above step_ and enter the following commands, which will create a virtual environment to isolate the Google Assistant SDK software from the rest of your python install. (note: you will be asked to enter a password for `sudo` commands, and also—you can replace 'env' in the first command with any name you wish for your virtual environment, just make sure to use it consistently).
+15. Next, enter the following commands, which will create a virtual environment to isolate the Google Assistant SDK software from the rest of your python install. (note: you will be asked to enter a password for `sudo` commands, and also—you can replace 'env' in the first command with any name you wish for your virtual environment, just make sure to use it consistently).
 
 ```
 $ python3 -m venv env
